@@ -10,9 +10,9 @@
 - *this* points to *window*
 > this === window -> true (at global level)
 ```
-var a = 10;      // not inside any fun. So global object
-function b() {    // this fun not inside any function. So global.
-  var x = 5;    // not global
+var a = 10;      // not inside any func. So will get attached to the global object
+function b() {    // this function is not inside any function. So this fucnction itself will also get attached to the global object
+  var x = 5;    // this is present inside the function, so this will NOT get attached to the global object
  }
 console.log(window.a); //gives us "a" value
 console.log(this.a); //this points to window so it returns "a" value
