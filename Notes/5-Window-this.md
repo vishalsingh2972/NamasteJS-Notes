@@ -16,7 +16,7 @@ function b() {    // this function is not inside any function. So this fucnction
  }
 console.log(window.a); //gives us "a" value
 console.log(this.a); //this points to window so it returns "a" value
-console.log(a); //also gives same "a" value. (if we dont put any . in front of variable, it **assumes variable is in global space**
+console.log(a); //also gives same "a" value. (if we dont put any . in front of variable, it **assumes variable is in global space and is attached to the global object**
 console.log(x); // x is not defined. (tries to find x inside global space, but it isn't there) 
 ```
 - Global object in case of browsers is known as a window. Javascripts is not just run on browsers, JS is running on servers and a lot of other devices as well, and wherever JS is runnning there must be a JS engine present, for example V8 is the name of the JavaScript engine that powers Google Chrome browser, Chakra is the name of the JavaScript engine that powers Internet Explorer browser, SpiderMonkey is the name of the JavaScript engine that powers Mozilla Firefox browser etc., so all these JS engines have a responsibility to create the global object and  in case of a web browser this global object is known as a WINDOW.
