@@ -5,6 +5,7 @@
 - Shortest JS program is nothing but an Empty JS file
 - Even for this program, JS engine does a lot behind the scenes
 - It creates the GEC, the "window" (GLOBAL OBJECT) and the *this* variable
+- There is always a GLOBAL OBJECT created when we run a JS program, for eg. even in the case of an Empty JS file program, JS will still create GLOBAL OBJECT even in this case
 - Window is a big global object that has a lot of functions and variables. All of these can be accessed from anywhere in the program
 - *this* points to *window*
 > this === window -> true (at global level)
