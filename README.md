@@ -15,7 +15,7 @@ This is my attempt at sharing JS knowledge with everyone, even those who might n
 If you have notes of your own, and are interested in contributing to this repo, hit a PR! I'll review it and add it immediately 🤓
 
 ## 📝 Resource Used 
-Namaste 🙏 JavaScript course by the legendary @akshaymarch7
+Namaste 🙏 JavaScript course by the legendary Akshay Saini
 
 ## ⭐ Testimonial from the man himself!
 <img src = "https://user-images.githubusercontent.com/58134096/105517629-4c35af00-5cfd-11eb-8747-74c0fe733031.png" width = "600" height = "500" />
