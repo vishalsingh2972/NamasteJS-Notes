@@ -18,5 +18,6 @@ console.log(this.a); //this points to window so it returns "a" value
 console.log(a); //also gives same "a" value. (if we dont put any . in front of variable, it **assumes variable is in global space**
 console.log(x); // x is not defined. (tries to find x inside global space, but it isn't there) 
 ```
-- Global space is anything in JS which isn't inside a function. All these global objects will be present inside the windows schema. But non globals ones won't be there (here, x)
+- Global object in case of browsers is known as a window. Javascripts is not just run on browsers, JS is running on servers and a lot of other devices as well, and wherever JS is runnning there must be a JS engine present, for example V8 is the name of the JavaScript engine that powers Google Chrome browser, Chakra is the name of the JavaScript engine that powers Internet Explorer browser, SpiderMonkey is the name of the JavaScript engine that powers Mozilla Firefox browser etc., so all these JS engines have a responsibility to create the global object and  in case of a web browser this global object is known as a WINDOW.
+- Global space is any code that we write in JS which is not inside a function. Basically anything which is not inside any fucntion is the Global space. 
 - When a GEC is made, *this* is also created with it (even for functional(local) EC). Global object provided by the browser engine is the window, so *this* points to window.
