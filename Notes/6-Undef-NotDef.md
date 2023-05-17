@@ -16,7 +16,7 @@ console.log(x);
 ```
 >undefined <br/>
 >25 <br/>
->Uncaught ReferenceError: x is not defined 
+>Uncaught ReferenceError: x is not defined , Basically no variable x is present in the memory yet so it will give not defined error
 
 
 - JS is a loosely-typed / weakly-typed language. It doesn't attach variables to any datatype. We can say var a = 5, and then change the value to bool (a = true) or string
