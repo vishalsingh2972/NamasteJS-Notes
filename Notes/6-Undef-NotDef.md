@@ -28,13 +28,34 @@ console.log(a);
 
 if(a === undefined){
    console.log("a is undefined");
+   //console.log(a);
 }
 else{
    console.log("a is NOT undefined");
+   //console.log(a);
 }
 ```
 >undefined <br/>
 >a is undefined <br/>
+
+```
+// code example 3
+var a;
+
+console.log(a);
+a = 10;
+
+if(a === undefined){
+   console.log("a is undefined");
+   //console.log(a);
+}
+else{
+   console.log("a is NOT undefined");
+   //console.log(a);
+}
+```
+>undefined <br/>
+>a is NOT undefined <br/>
 
 
 - JS is a loosely-typed / weakly-typed language. It doesn't attach variables to any datatype. We can say var a = 5, and then change the value to bool (a = true) or string
