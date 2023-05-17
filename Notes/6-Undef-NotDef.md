@@ -87,8 +87,8 @@ console.log(a);
 a = "Hello Vishal";
 console.log(a);
 
-a = undefined;
-console.log(a); //*you will still get the output as usual but this practise is wrong so avoid using this*
+a = undefined; // wrong practise
+console.log(a); // you will still get the output as usual but this practise is wrong so avoid using this
 
 }
 ```
@@ -96,4 +96,4 @@ console.log(a); //*you will still get the output as usual but this practise is w
 >10 <br/>
 >Hello Vishal
 
->undefined <br/> 
+>undefined :x:
