@@ -76,4 +76,24 @@ console.log(a);
 >10 <br/>
 >Hello Vishal
 
-- **Never** assign *undefined* to a variable manually. Let it happen on it's own accord.
+- **Never** assign *undefined* to a variable manually. Let it happen on it's own accord. Basically it is not a good practise to manually assign undefined to any variable as it can lead to a lot of inconsistencies so better avoid this practise.
+```
+// code example 5
+var a;
+
+console.log(a);
+a = 10;
+console.log(a);
+a = "Hello Vishal";
+console.log(a);
+
+a = undefined;
+console.log(a); //*you will still get the output as usual but this practise is wrong so avoid using this*
+
+}
+```
+>undefined <br/>
+>10 <br/>
+>Hello Vishal
+
+>undefined <br/> 
