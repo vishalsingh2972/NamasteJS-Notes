@@ -8,6 +8,7 @@
 > When variable is declared but not assigned value, its current value is undefined. But when the variable itself is not declared but called in code, then it is not defined. 
 
 ```
+// code example 1
 console.log(a);
 var a = 25;
 
@@ -18,6 +19,22 @@ console.log(x);
 >undefined <br/>
 >25 <br/>
 >Uncaught ReferenceError: x is not defined , Basically no variable x is present in the memory yet so it will give not defined error
+
+```
+// code example 2 - until value is assigned to "a" it will remain having value assigned as undefined
+var a;
+
+console.log(a);
+
+if(a === undefined){
+   console.log("a is undefined");
+}
+else{
+   console.log("a is NOT undefined");
+}
+```
+>undefined <br/>
+>a is undefined <br/>
 
 
 - JS is a loosely-typed / weakly-typed language. It doesn't attach variables to any datatype. We can say var a = 5, and then change the value to bool (a = true) or string
