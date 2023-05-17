@@ -59,5 +59,21 @@ else{
 
 
 - JS is a loosely-typed / weakly-typed language. It doesn't attach variables to any datatype. We can say var a = 5, and then change the value to bool (a = true) or string
-(a = 'hello') later on. 
+(a = 'Hello Vishal') later on. 
+```
+// code example 4
+var a;
+
+console.log(a);
+a = 10;
+console.log(a);
+a = "Hello Vishal";
+console.log(a);
+
+}
+```
+>undefined <br/>
+>10 <br/>
+>Hello Vishal
+
 - **Never** assign *undefined* to a variable manually. Let it happen on it's own accord.
