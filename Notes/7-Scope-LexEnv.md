@@ -68,7 +68,7 @@ function a() {
     GEC =  [a:{},[lexical_environment pointer pointing to null]]
 
  ```
-  ### For case -3 
+  ### For Case -3 
   - First JS engine searches for b in local mem of c(). Nothing is there. 
   - So it goes to the reference of Lexical env of parent a(). Here b = 10 is here. So it takes this value, goes back to c() and console prints it.
   - Had b not been in a(), then pointer would have gone to a()'s parent (Global EC and searched there). Had b not been there too, then it goes to LE of global's parent
