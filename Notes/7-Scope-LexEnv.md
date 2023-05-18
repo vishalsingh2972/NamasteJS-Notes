@@ -4,15 +4,16 @@
 This is why JS is confusing (Case-1)
 
 function a() {
-    console.log(b); // surprisingly instead of printing undefined it prints 10. 
-    //So somehow this b could access the b outside the fun. 
+    console.log(b); // surprisingly instead of printing not defined it prints 10. 
+    //So somehow this b(present in local EC) could access the b outside the func.(present in GEC) 
 }
 
 var b = 10;
 a();
-
+```
+> 10
 ---------------------
-
+```
 Another case: (Case-2)
 
 function a() {
@@ -23,9 +24,10 @@ function a() {
  }
  var b = 10;
  a();
- 
+ ```
+ > 10
  --------------------
- 
+ ```
  Another one (DJ KHALED!) (Case-3)
  
  function a() {
@@ -38,9 +40,11 @@ function a() {
  
  a();
  console.log(b); // now when cursor comes here, it prints NOT DEFINED!
-
 ```
-
+> 10 <br/>
+> b is not defined
+ --------------------
+ 
 - This is the intuition behind **scope**
 - Scope is directly dependent on the lexical environment
 - **Lexical Environment** : local memory + lexical env of its parent
