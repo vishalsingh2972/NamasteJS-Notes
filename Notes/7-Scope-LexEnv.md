@@ -60,8 +60,8 @@ i.e ***total memory of func. c = local memory of c (variables and func. in c (no
 - LE of a() in turn is its memory space + reference to LE of parent (Global EC) i.e ***LE of a() = local memory of a (variables and func. in a) + {reference to LE of parent of a == LE of (Global EC) }***
 - LE of (Global EC) in turn is its memory space + reference to LE of parent of Global EC i.e ***LE of parent (Global EC) = local memory of (Global EC) + reference to LE of parent of GEC***
 - LE of parent of GEC is/points to *null*   //because (Global EC) has no parent
-
  ```
+ 
     To summarize the above points:
     
     call_stack = [GEC, a(), c()]
