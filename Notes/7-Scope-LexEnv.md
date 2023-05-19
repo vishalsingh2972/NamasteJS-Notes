@@ -49,7 +49,6 @@ function a() {
 > 10 <br/>
 > b is not defined
  --------------------
- 
 - This is the intuition behind **scope**
 - Scope is directly dependent on the lexical environment
 - **Lexical Environment** : local memory + lexical env of its parent; so suppose c is a function inside function a and a is a function inside GEC, so  total memory of c =  local memory of c  + reference to the lexical environment of parent a and lexical environment of a = total memory of a = local memory of a + reference to the lexical environment of parent GEC
@@ -61,7 +60,6 @@ i.e ***total memory of func. c = local memory of c (variables and func. in c (no
 - LE of (Global EC) in turn is its memory space + reference to LE of parent of Global EC i.e ***LE of parent (Global EC) = local memory of (Global EC) + reference to LE of parent of GEC***
 - LE of parent of GEC is/points to *null*   //because (Global EC) has no parent
  ```
- 
     To summarize the above points:
     
     call_stack = [GEC, a(), c()]
@@ -73,7 +71,6 @@ i.e ***total memory of func. c = local memory of c (variables and func. in c (no
     a() = [b:10, c:{}, [lexical environment pointer pointing to GEC]]
 
     GEC =  [a:{},[lexical_environment pointer pointing to null]]
-
  ```
   ### For Case-3 
   - First JS engine searches for b in local mem of c(). Nothing is there. 
