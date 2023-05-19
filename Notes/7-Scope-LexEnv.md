@@ -58,7 +58,8 @@ function a() {
 - So in EC of c() in the memory column- variables and func. in c (none) + reference of lexical env of parent a() is there 
 i.e ***total memory of func. c = local memory of c (variables and func. in c (none)) + reference of lexical env of parent a()***
 - LE of a() in turn is its memory space + reference to LE of parent (Global EC) i.e ***LE of a() = local memory of a (variables and func. in a) + reference to LE of parent (Global EC)***
-- LE of Global EC points to *null*
+- LE of parent (Global EC) in turn is its memory space + reference to LE of parent of Global EC i.e ***LE of parent (Global EC) = local memory of (Global EC) + reference to LE of parent of GEC***
+- LE of parent of GEC points to *null*
 
  ```
     To summarize the above points:
