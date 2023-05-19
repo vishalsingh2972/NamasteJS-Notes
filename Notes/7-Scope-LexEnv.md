@@ -39,7 +39,7 @@ function a() {
   var b = 10;
   c();
   function c() {
-    console.log(b); //it prints the right value. How? See ans below Summary part
+    console.log("andar wala b - " + b); //it prints the right value. How? See ans below Summary part
   }
  }
  
