@@ -54,7 +54,7 @@ function a() {
 - Scope is directly dependent on the lexical environment
 - **Lexical Environment** : local memory + lexical env of its parent; so suppose c is a function inside function a and a is a function inside GEC, so  total memory of c =  local memory of c  + reference to the lexical environment of parent a and lexical environment of a = total memory of a = local memory of a + reference to the lexical environment of parent GEC
 - Whenever an EC is created, a Lexical environment(LE) is also created and is referenced in the local EC(in memory space)
-- Lexical means hierarchy. In the DJ KHALED (xD) code, function c is lexically inside function a. 
+- Lexical means hierarchy. In the DJ KHALED (xD) code, function c is lexically inside function a, or in other words a is the lexical parent of c
 - So in EC of c() in the memory column- variables and func. in c (none) + reference of lexical env of parent a() is there 
 i.e ***total memory of func. c = local memory of c (variables and func. in c (none)) + reference of lexical env of parent a()***
 - LE of a() in turn is its memory space + reference to LE of parent (Global EC) i.e ***LE of a() = local memory of a (variables and func. in a) + reference to LE of parent (Global EC)***
