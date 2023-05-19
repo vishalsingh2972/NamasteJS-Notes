@@ -1,7 +1,7 @@
 # Episode 7 : Scope and Lexical Environment
 
 ```
-This is why JS is confusing (Case-1)
+(Case-1)
 
 function a() {
 //var b = 25;
