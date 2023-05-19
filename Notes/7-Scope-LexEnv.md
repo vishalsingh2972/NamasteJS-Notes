@@ -4,6 +4,8 @@
 This is why JS is confusing (Case-1)
 
 function a() {
+//var b = 25;
+
     console.log(b); // surprisingly instead of printing not defined it prints 10. 
     //So somehow this b(present in local EC) could access the b outside the func.(present in GEC) 
 }
