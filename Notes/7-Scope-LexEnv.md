@@ -56,8 +56,8 @@ function a() {
 - Whenever an EC is created, a Lexical environment(LE) is also created and is referenced in the local EC(in memory space)
 - Lexical means hierarchy. In the DJ KHALED (xD) code, function c is lexically inside function a, or in other words c is physically present inside a so - a is the lexical parent of c/ c's lexical parent is a
 - So in EC of c() in the memory column- variables and func. in c (none) + reference of lexical env of parent a() is there 
-i.e ***total memory of func. c = local memory of c (variables and func. in c (none)) + (reference of lexical env of parent of c == LE of a() )***
-- LE of a() in turn is its memory space + reference to LE of parent (Global EC) i.e ***LE of a() = local memory of a (variables and func. in a) + (reference to LE of parent of a == LE of (Global EC) )***
+i.e ***total memory of func. c = local memory of c (variables and func. in c (none)) + {reference of lexical env of parent of c == LE of a() }***
+- LE of a() in turn is its memory space + reference to LE of parent (Global EC) i.e ***LE of a() = local memory of a (variables and func. in a) + {reference to LE of parent of a == LE of (Global EC) }***
 - LE of (Global EC) in turn is its memory space + reference to LE of parent of Global EC i.e ***LE of parent (Global EC) = local memory of (Global EC) + reference to LE of parent of GEC***
 - LE of parent of GEC is/points to *null*   //because (Global EC) has no parent
 
