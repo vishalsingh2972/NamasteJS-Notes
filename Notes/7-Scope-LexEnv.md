@@ -78,7 +78,7 @@ i.e ***total memory of func. c = local memory of c (variables and func. in c (no
   - Had b not been in a(), then pointer would have gone to a()'s parent (Global EC and searched there). Had b not been there too, then it goes to LE of global's parent
   which is null. Now JS engine stops and says b is NOT DEFINED. 
   - **Lexical env of c = Local memory of c + LE of A + LE of Global**
-  - The chain of all the Lexical Environments is known as the **scope chain** and it defines whether a variable or function is present inside the scope or not / This process of going one by one to parent and checking is called **scope chain**
+  - The chain of all the Lexical Environments is known as the **scope chain** and it defines whether a variable or function is present inside the scope or not (If the scope chain is exhausted and the variable is not found that means the variable  is not present inside the scope chain) / This process of going one by one to parent and checking is called **scope chain**
  --------------------
 ```
   Another Trial Example
