@@ -26,6 +26,8 @@ function a() {
  }
  var b = 10;
  a();
+ //var b = 44;
+ //console.log(b); 
  ```
  > 10
  --------------------
