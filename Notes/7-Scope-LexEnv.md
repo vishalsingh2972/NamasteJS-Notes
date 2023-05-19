@@ -80,7 +80,25 @@ function a() {
   which is null. Now JS engine stops and says b is NOT DEFINED. 
   - **Lexical env of c = Local memory of c + LE of A + LE of Global**
   - This process of going one by one to parent and checking is called **scope chain**
+ --------------------
+```
+  Another Trial Example
  
+function a() {
+  var b = 2;
+  c();
+
+  function c() {
+    //var b = 3;
+  console.log(b);
+  }
+ }
+
+ var b = 1;
+ a();
+```
+> 2
+ --------------------
   
   
 
