@@ -24,7 +24,7 @@ accessed only after assigning some value to it first.
 
 ```
 let a = 10;
-let a = 100;  //this code is rejected upfront(it does not even run a single line of code as soonn as it encounters duplicate declaration of let or const and upfront directl gives SyntaxError) as SyntaxError. (duplicate declaration)
+let a = 100;  //this code is rejected upfront(it does not even run a single line of code as soon as it encounters duplicate declaration of let or const and upfront directly gives SyntaxError) as SyntaxError. (duplicate declaration)
 ------------------
 let a = 10;
 var a = 100; // this code also rejected upfront as SyntaxError.
