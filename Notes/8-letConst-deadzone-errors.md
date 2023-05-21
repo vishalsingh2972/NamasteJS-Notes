@@ -113,7 +113,7 @@ Summing it all up - There are three types of error:
 * Avoid var.
 * In day-to-day coding use const or var wherever/whenever possible and avoid using var. 
 * However, there are certain cases where the var keyword is necessary. In such cases, where the var keyword is being used make sure to use it consciously.
-* Declare and initialize all variables with let to the top to avoid errors to shrink temporal dead zone window to zero.
+* Declare and initialize all variables with let to the top to avoid errors to shrink temporal dead zone window to zero. //basically if you initialize all of your variables at the top of your code, there will be no TDZ
 
 PS: If in any interview when asked "Are let and const hoisted?" explain fully about temporal deadzone and all the above concepts too
 
