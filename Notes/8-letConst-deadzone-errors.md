@@ -17,7 +17,7 @@ It looks like let isn't hoisted, **but it is**
 accessed only after assigning some value to it first.
 - ie. one can access 'a' only if it is assigned. Thus, it throws error.
 - **Temporal Dead Zone** : Time since when the let variable was hoisted until it is initialized some value. //temporal dead zone begins when varialbes are declared and temporal dead zone ends when initilisation starts - basically a temporal dead zone works between the time a variable is declared till the time a value gets assigned to the variable
-- And whenever we try to access the variable (//console.log or try print the variable) inside a TDZ it will give us a reference error (// Uncaught ReferenceError: Cannot access 'a' before initialization)
+- And whenever we try to access the variable (//console.log or try print the variable) inside a TDZ it will give us a reference error (// Uncaught ReferenceError: Cannot access 'a' before initialization), basically a variable is not accessible inside a Temporal Dead Zone (TDZ) and can be accessed only after the TDZ ends or value of a is initialised.
 - So any line till before "let a = 10" is the TDZ for a
 - Since a is not accessible on global, its not accessible in *window/this* also
 > window.b or this.b -> 15; But window.a or this.a ->undefined, just like window.x or this.x->undefined  (x isn't declared anywhere)
@@ -100,6 +100,10 @@ Also, if variable that is assigned with 'let' declaration is tried to re-declare
 
 The Errors that occurs if no reference is available for access. Can occur when the variable is no where in scope or maybe it is in temporal dead zone.
 
+Summing it all up - There are three types of error:
+1. referenceError {given where variable does not have memory allocation like -->console.log(a); let/const a = 100;❌ (console.log(a) will give referenceError as at this point of time a is in the TDZ and as we know in TDZ a will not be accessible) or -->console.log(x)/console.log(j);❌(when I try to access a random variable like x or j which is not even declared I get a referenceError)}
+2. typeError {given when we change type that is not supposed to be changed like -->const b= 1000; b= 10000❌ (const cannot be changed once initialised)} 
+3. syntaxError {when proper syntax(way of writing a statement) is not used like -->const b; b= 1000;❌ (const must be declared and initialised in the same line like const b= 1000;}
 
 ### SOME GOOD PRACTICES:
 
