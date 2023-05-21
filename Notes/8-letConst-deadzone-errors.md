@@ -50,7 +50,7 @@ b = 1000;
 //this gives us TypeError: Assignment to constant variable. 
 
 ```
-- Till now 3 types of errors have been covered: Syntax, Reference, and Type.
+- Till now 3 types of errors have been covered: Syntax error, Reference error, and Type error.
 
 * Uncaught ReferenceError: x is not defined at ...
 
