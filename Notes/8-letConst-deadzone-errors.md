@@ -28,7 +28,7 @@ let a = 100;  //this code is rejected upfront(it does not even run a single line
 ------------------
 let a = 10;
 var a = 100; // this code also rejected upfront as SyntaxError.
-(can't use same name in same scope)
+(can't use same name for both var and let in same scope)
 
 ```
 Let is a stricter version of var. Now, **const** is even more stricter than let.
