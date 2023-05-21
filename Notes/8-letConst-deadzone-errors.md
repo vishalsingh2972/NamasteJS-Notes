@@ -13,7 +13,7 @@ var b = 15;
 ```
 It looks like let isn't hoisted, **but it is**
 
-- Both a and b are actually initialized as *undefined* in hoisting stage. But var b is inside the storage space of GLOBAL, and a is in a separate memory(script), where it can be
+- Both a and b are actually initialized as *undefined* in hoisting stage. But var b is inside the storage space of GLOBAL or in other words var b got attached to the global object(as we saw in EPI 5), and a is in a separate memory(script), where it can be
 accessed only after assigning some value to it first.
 - ie. one can access 'a' only if it is assigned. Thus, it throws error.
 - **Temporal Dead Zone** : Time since when the let variable was hoisted until it is initialized some value. 
