@@ -16,7 +16,7 @@ It looks like let isn't hoisted, **but it is**
 - Both a and b are actually initialized as *undefined* in hoisting stage. But var b is inside the storage space of GLOBAL or in other words var b got attached to the global object(as we saw in EPI 5), and a is in a separate memory(SCRIPT), where it can be
 accessed only after assigning some value to it first.
 - ie. one can access 'a' only if it is assigned. Thus, it throws error.
-- **Temporal Dead Zone** : Time since when the let variable was hoisted until it is initialized some value. 
+- **Temporal Dead Zone** : Time since when the let variable was hoisted until it is initialized some value. //temporal dead zone begins when varialbes are declared and temporal dead zone ends when initilisation starts - basically a temporal dead zone works between the time a variable is declared till the time a value gets assigned to the variable
 - So any line till before "let a = 10" is the TDZ for a
 - Since a is not accessible on global, its not accessible in *window/this* also
 > window.b or this.b -> 15; But window.a or this.a ->undefined, just like window.x->undefined (x isn't declared anywhere)
