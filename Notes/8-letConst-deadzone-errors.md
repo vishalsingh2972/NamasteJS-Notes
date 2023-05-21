@@ -20,7 +20,7 @@ accessed only after assigning some value to it first.
 - And whenever we try to access the variable (//console.log or try print the variable) inside a TDZ it will give us a reference error (// Uncaught ReferenceError: Cannot access 'a' before initialization)
 - So any line till before "let a = 10" is the TDZ for a
 - Since a is not accessible on global, its not accessible in *window/this* also
-> window.b or this.b -> 15; But window.a or this.a ->undefined, just like window.x->undefined (x isn't declared anywhere)
+> window.b or this.b -> 15; But window.a or this.a ->undefined, just like window.x or this.x->undefined  (x isn't declared anywhere)
 
 ```
 let a = 10;
