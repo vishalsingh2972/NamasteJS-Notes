@@ -111,7 +111,7 @@ console.log(a); // 10 instead of the 100 we were expecting.So apart from "dusraA
 * If one has same named variable outside the block, the variable inside the block *shadows* the outside variable.
 * So, a is reassigned to 10. Since both refers to same memory space i.e GLOBAL SPACE. **This happens only for var**
 
-### Instead of var let us use let
+### Instead of "var" let us use "let"
 ```
 //code example 6
 
