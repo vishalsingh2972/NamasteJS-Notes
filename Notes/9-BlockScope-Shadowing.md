@@ -158,7 +158,7 @@ Outputs:
 > 100  // Both c's are in separate spaces (one in Block(30) and one in Script(another arbitrary mem space)(100))
 
 ### Same logic is true even for functions
-
+Shadowing is not only a concept og block, shadowing behaves the same way or has same logic even in the case of function also
 ```
 const c = 100; //pehlaC
 function x() {
