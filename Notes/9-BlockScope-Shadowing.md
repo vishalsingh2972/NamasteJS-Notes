@@ -128,7 +128,7 @@ console.log(b);
 
 Outputs:
 
-> 20  //here dusraB (present in Block) will shadow pehlaB (present in Script)
+> 20  //here dusraB of value 20 (present in Block) is shadowing pehlaB of value 100 (present in Script)
 
 > 100  // this was what we were expecting in this first place. Both b's are in separate spaces (one in Block(20) and one in Script(another arbitrary mem space)(100))
 
