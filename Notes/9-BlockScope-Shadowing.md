@@ -115,10 +115,10 @@ console.log(a); // 10 instead of the 100 we were expecting.So apart from "dusraA
 ```
 //code example 6
 
-let b = 100;
+let b = 100; //pehlaB
 {
     var a = 10;
-    let b = 20;
+    let b = 20; //dusraB
     const c = 30;
     console.log(b);
 }
@@ -128,7 +128,7 @@ console.log(b);
 
 Outputs:
 
-> 20
+> 20  //here dusraB (present in Block) will shadow pehlaB (present in Script)
 
 > 100  // this was what we were expecting in this first place. Both b's are in separate spaces (one in Block(20) and one in Script(another arbitrary mem space)(100))
 
