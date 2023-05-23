@@ -94,17 +94,17 @@ Outputs:
 ```
 //code example 5
 
-var a = 100;
+var a = 100; //pehlaA
 {
-    var a = 10; //same name as global var
+    var a = 10; //same name as global var //dusraA
     let b = 20;
     const c = 30;
-    console.log(a); // 10
+    console.log(a); // 10 //dusraA variable a shadows pehlaA variale a so 10 gets printed
     console.log(b); // 20
     console.log(c); // 30 
 }
 
-console.log(a); // 10 instead of the 100 we were expecting. So block "a" modified val of global "a" as well. 
+console.log(a); // 10 instead of the 100 we were expecting.So apart from "dusraA variable a shadows pehlaA variale a so 10 gets printed", dusraA also modified the existing pehlaA value of variable a , basiaclly block "a" modified val of global "a" as well
 // In console, only b and c are in block space. a initially is in global space(a = 100), and when a = 10 line is run, a is not created in block space, but replaces 100 with 10 in global space itself. 
 ```
 
