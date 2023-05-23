@@ -59,6 +59,36 @@ But var a can be accessed anywhere as it is in global scope.
 * Hence, **Variables declared with *let* and *const* are not accessible outside the block in which they are declared. This is called block scope**. 
 * But observe we can access var a even outside the block (i.e even after line 5) because var is in the global scope or attactched to the global object (here global object is window). Hence, **Variables declared with var are globally scoped, which means that they can be accessed from anywhere in the JS program**.
 
+```
+//code example 4
+
+{
+  var a = 10;
+  let b = 20;
+  const c = 30;
+
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+  console.log(a);
+  console.log(b); //error- will not print as b cannot be accessed out of block, so program will come and stop at this line
+  console.log(c); //error- will not print as c cannot be accessed out of block
+  
+```
+Outputs:
+
+> 10
+
+> 20
+
+> 30
+
+> 10
+
+>  Uncaught ReferenceError: b is not defined
+
 ### __What is SHADOWING in JS?__
 
 ```
