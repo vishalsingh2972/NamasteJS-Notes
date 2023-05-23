@@ -160,6 +160,8 @@ Outputs:
 ### Same logic is true even for functions
 Shadowing is not only a concept og block, shadowing behaves the same way or has same logic even in the case of function also
 ```
+//so even if instead of block {..} we have a function scope function x() {..} the shadowing behaves in a similar way as in the case of block {..}
+
 const c = 100; //pehlaC
 function x() {
   const c = 10; //dusraC
