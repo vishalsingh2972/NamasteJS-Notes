@@ -2,7 +2,7 @@
 
 ### What is a block?
 - Block a.k.a *compound statement* is used to group JS statements together into 1 group. We group them within {...}
-- Why do we need to group all the statements together? - The purpose of grouping all the statements together is so that we can use all the multiple statements in a place where JS expects only 1 statement.
+- Why do we need to group all the statements together? - The purpose of grouping all the statements together is so that we can use multiple statements in a place where JS expects only 1 statement.
 
 ```
 //code example 1
