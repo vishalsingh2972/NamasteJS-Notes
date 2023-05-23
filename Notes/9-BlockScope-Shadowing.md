@@ -125,10 +125,9 @@ let b = 100; //pehlaB
 
 console.log(b);
 ```
-
 Outputs:
 
-> 20  //here dusraB of value 20 (present in Block) is shadowing pehlaB of value 100 (present in Script)
+> 20  // here dusraB of value 20 (present in Block) is shadowing pehlaB of value 100 (present in Script)
 
 > 100  // this was what we were expecting in this first place. Both b's are in separate spaces (one in Block(20) and one in Script(another arbitrary mem space)(100))
 
@@ -138,12 +137,32 @@ Outputs:
 * This concept is called "Shadowing".
 * It is also true for *const* declarations.
 
+### Even "const"  behaves same as "let" in example 6
+```
+//code example 7
+
+const c = 100; //pehlaC
+{
+    var a = 10;
+    let b = 20; 
+    const c = 30; //dusraC
+    console.log(c);
+}
+
+console.log(c);
+```
+Outputs:
+
+> 30  // here dusraC of value 30 (present in Block) is shadowing pehlaC of value 100 (present in Script) 
+
+> 100  // Both c's are in separate spaces (one in Block(30) and one in Script(another arbitrary mem space)(100))
+
 ### Same logic is true even for functions
 
 ```
-const c = 100;
+const c = 100; //pehlaC
 function x() {
-  const c = 10;
+  const c = 10; //dusraC
   console.log(c);
 }
 x();
@@ -151,14 +170,14 @@ console.log(c);
 
 ```
 Output:
-> 10
+> 10 
 
 > 100
 
 ### __What is Illegal Shadowing?__
 
 ```
-// code example 7
+// code example 8
 
 let a = 20;
 {
@@ -177,7 +196,7 @@ Outputs:
 * Since var is function scoped, it is not a problem with the code below.
 
 ```
-// code example 8
+// code example 9
 
 let a = 20;
 function x() {
