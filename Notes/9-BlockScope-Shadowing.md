@@ -92,7 +92,7 @@ Outputs:
 ### __What is SHADOWING in JS?__
 
 ```
-//code example 4
+//code example 5
 
 var a = 100;
 {
@@ -113,7 +113,7 @@ console.log(a); // 10 instead of the 100 we were expecting. So block "a" modifie
 
 ### Instead of var let us use let
 ```
-//code example 5
+//code example 6
 
 let b = 100;
 {
@@ -158,7 +158,7 @@ Output:
 ### __What is Illegal Shadowing?__
 
 ```
-// code example 6
+// code example 7
 
 let a = 20;
 {
@@ -177,7 +177,7 @@ Outputs:
 * Since var is function scoped, it is not a problem with the code below.
 
 ```
-// code example 7
+// code example 8
 
 let a = 20;
 function x() {
