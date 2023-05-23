@@ -96,7 +96,7 @@ Outputs:
 
 var a = 100; //pehlaA
 {
-    var a = 10; //same name as global var //dusraA
+    var a = 10; //same name as global var a //dusraA
     let b = 20;
     const c = 30;
     console.log(a); // 10 //dusraA variable a shadows pehlaA variale a so 10 gets printed
