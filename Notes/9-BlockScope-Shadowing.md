@@ -36,7 +36,7 @@ if(true){
     var a = 10;
     let b = 20;
     const c = 30;
-}
+} //line 5
 
 console.log(a);
 console.log(b);
@@ -55,7 +55,7 @@ Outputs:
 
 * Thus we say, *let* and *const* are BLOCK SCOPED. They are stored in a separate mem space which is reserved for this block. Also, they can't be accessed outside this block.
 But var a can be accessed anywhere as it is in global scope.
-* Thus, we can't access them outside the Block.
+* Thus, we can't access them outside the Block. (//after executing it reaches line 5 and now after line 5 variables b and c are no longer accessible as after line 5, the block is finished and *let* and *const* are not accessible outside the block)
 
 ### __What is SHADOWING in JS?__
 
