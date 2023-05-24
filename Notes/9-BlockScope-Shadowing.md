@@ -195,7 +195,7 @@ Outputs:
 * We cannot shadow let with var, this is illegal shadowing. 
 * However, we can shadow var with let.
 * Also as we know it is valid to shadow a let using a let, it is valid to shadow a var using a var.
-* ***var is function scoped*** and ***let & consts are block scoped***
+* ***var is function scoped*** &&& ***let and const are block scoped***
 * All scope rules that work in function are same in arrow functions too.
 * Since var is function scoped, it is not a problem with the code below.
 
