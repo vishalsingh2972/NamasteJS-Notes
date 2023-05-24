@@ -226,7 +226,7 @@ const a = 20;
 }
 ```
 ------------
-* All scope rules that work in function are same in arrow functions too. 
+* All scope rules that work in function are same in arrow functions also. 
 ```
 //Arrow Function of function x()
 
