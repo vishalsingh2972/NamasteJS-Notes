@@ -211,7 +211,7 @@ function x() {
 
 ```
 ### Lexical Block Scope
-If JS engine does not find variable value in block it searches for that value in the parent block and if it still does not find the variable value it again seraches in its parent (grandparent XD) and so on......
+If JS engine does not find variable value in block (in block where we are trying to print using console.log) then it searches for that variable value in the parent block and if it still does not find the variable value there then it again searches in its parent (grandparent XD) and so on......
 
 ```
 // code example 10
