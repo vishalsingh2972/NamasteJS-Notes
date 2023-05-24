@@ -218,7 +218,7 @@ If JS engine does not find variable value in block it searches for that value in
 
 const a = 20;
 {
-  const a = 100;
+  //const a = 99;
   {
     //const a = 200;
     console.log(a);
