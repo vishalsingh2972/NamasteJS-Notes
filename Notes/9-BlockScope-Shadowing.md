@@ -179,9 +179,11 @@ Output:
 ### __What is Illegal Shadowing?__
 
 ```
-// code example 8
+// code example 8 (below is let example but const also behaves same as let)
 
-let a = 20;
+let a = 20; 
+
+//function x()
 {
     var a = 20;
 }
