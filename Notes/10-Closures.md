@@ -56,9 +56,21 @@ function x(){
 
 x();
 ```
+```
+//Example 5 - extension of Example 4
 
+function x(){
+  var a = 7;
+  function y(){
+    console.log(a);
+  }
+  return y;
+}
 
-
+//console.log(z);
+var z = x();
+console.log(z);
+```
 
 
 
