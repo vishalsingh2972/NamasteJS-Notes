@@ -30,10 +30,19 @@ function x(){
 
 x();
 ```
+```
+//Example 3 -  Passing an entire function as a parameter inside another function
 
+function x(){
+  var a = 7;
+  
+  y();
+}
 
-
-
+x(function y(){
+    console.log(a);
+  });
+```
 ```
 JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
 eg:
