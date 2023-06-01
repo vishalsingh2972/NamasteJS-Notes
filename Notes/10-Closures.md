@@ -2,7 +2,7 @@
 
 ### Important Interview Question
 
-**Closure :** Function bundled together with its lexical environment/scope.
+**Closure :** Function bundled together with its lexical environment/scope. //Function along with its lexical scope forms a closure.
 
 ```
 JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
