@@ -18,7 +18,7 @@ function x(){
 x();
 ```
 ```
-//Example 2 -  Assigning entire function to a variable
+//Example 2 - Assigning entire function to a variable
 
 function x(){
   var a = function y(){
@@ -31,7 +31,7 @@ function x(){
 x();
 ```
 ```
-//Example 3 -  Passing an entire function as a parameter inside another function
+//Example 3 - Passing an entire function as a parameter inside another function
 
 function x(){
   var a = 7;
@@ -43,6 +43,26 @@ x(function y(){
     console.log(a);
   });
 ```
+```
+//Example 4 - return a function from a function
+
+function x(){
+  var a = 7;
+  function y(){
+    console.log(a);
+  }
+  return y;
+}
+
+x();
+```
+
+
+
+
+
+
+
 ```
 JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
 eg:
