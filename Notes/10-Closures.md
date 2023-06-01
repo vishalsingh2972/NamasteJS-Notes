@@ -5,6 +5,36 @@
 **Closure :** Function bundled together with its lexical environment/scope. //Function along with its lexical scope forms a closure.
 
 ```
+//Example 1
+
+function x(){
+  var a = 7;
+  function y(){
+    console.log(a);
+  }
+  y();
+}
+
+x();
+```
+```
+//Example 2 -  Assigning entire function to a variable
+
+function x(){
+  var a = function y(){
+    console.log(a);
+  };
+  
+  y();
+}
+
+x();
+```
+
+
+
+
+```
 JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
 eg:
 
