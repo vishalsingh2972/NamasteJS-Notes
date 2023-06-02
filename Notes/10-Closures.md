@@ -126,6 +126,25 @@ var z = x();
 console.log(z);
 z();
 ```
+```
+//Example 9
+
+function z() {
+  var b = 900; 
+  function x(){
+    var a = 7;
+    function y(){
+      //var a = 22;
+      console.log(a,b);
+      //var a = 22;
+    }
+    y();
+  }
+  x();
+}
+z();
+```
+
 ### Uses of Closure
 
 Module Design Pattern, Currying, Functions like once(fun that can be run only
