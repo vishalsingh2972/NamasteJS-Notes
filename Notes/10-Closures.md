@@ -71,29 +71,23 @@ function x(){
 var z = x();
 console.log(z);
 ```
-
-
-
-
-```
-JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
-eg:
-
-function x() {
-  var a = 7;
-  function y() {
-  console.log(a);
-}
-  return y;   // instead of y();
-}
-var z = x();
-console.log(z);  // value of z is entire code of function y.
-
-```
-
+-----------------------
 When functions are returned from another fun, they still maintain their lexical
 scope.
+ ```
+function x(){
+  var a = 7;
+  function y(){
+    console.log(a);
+  }
+  return y;
+}
 
+var z = x();
+console.log(z);
+//....................after 1000 lines of code
+z();
+```
 - When y is returned, not only is the fun returned but the entire closure (fun
   y + its lexical scope) is returned and put inside z. So when z is used
   somewhere else in program, it still remembers var a inside x()
