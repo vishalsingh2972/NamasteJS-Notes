@@ -88,8 +88,8 @@ console.log(z);
 //....................after 1000 lines of code
 z();
 ```
-- When y is returned, not only is the function returned but the entire closure (func. y + its lexical scope) is returned and put inside z. So when z is used somewhere else in program, it still remembers var a inside x() //so even though after line 9 evn though x() function or x EC no longer exists in the memory but the y() function still remembers its lexical scope/environment or basically where it came from //so even though x is lost y still has strong binding with its parent x
-- Even though the x function is no longer accessible after line 9, the y function still has a strong binding with it. This is because the y function is a closure. A closure is a function that has access to the variables of its enclosing scope, even after the enclosing scope has been closed.
+- When y is returned, not only is the function returned but the entire closure (func. y + its lexical scope) is returned and put inside z. So when z is used somewhere else in program, it still remembers var a inside x() //so even though after line 9 evn though x() function or x EC no longer exists in the memory but the y() function still remembers its lexical scope/environment or basically where it came from 
+- So even though the x function is lost or no longer accessible after line 9, the y function still has a strong binding with its parent x function. This is because the y function is a closure. A closure is a function that has access to the variables of its enclosing scope, even after the enclosing scope has been closed.
 - Closure is a very powerful concept of JS, just because this function remembers things even if they are not in their lexical scope
 
 ### Uses of Closure
