@@ -75,6 +75,8 @@ console.log(z);
 When functions are returned from another fun, they still maintain their lexical
 scope.
  ```
+ //Example 6
+ 
 function x(){
   var a = 7;
   function y(){
@@ -92,6 +94,21 @@ z(); //line XXD
 - So even though the x function is lost or no longer accessible after line 9, the y function still has a strong binding with its parent x function. This is because the y function is a closure. A closure is a function that has access to the variables of its enclosing scope, even after the enclosing scope has been closed.
 - Closure is a very powerful concept of JS, just because this function remembers things even if they are not in their lexical scope
 
+ ```
+ //Example 7 - same just another way of writing Example 6
+ 
+function x(){
+  var a = 7;
+  return function y(){
+    console.log(a);
+  }
+}
+
+var z = x(); 
+console.log(z);
+//....................after 1000 lines of code
+z(); //line XXD
+```
 ### Uses of Closure
 
 Module Design Pattern, Currying, Functions like once(fun that can be run only
