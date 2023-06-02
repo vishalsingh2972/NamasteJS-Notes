@@ -88,7 +88,7 @@ console.log(z);
 //....................after 1000 lines of code
 z();
 ```
-- When y is returned, not only is the fun returned but the entire closure (fun
+- When y is returned, not only is the function returned but the entire closure (func.
   y + its lexical scope) is returned and put inside z. So when z is used
   somewhere else in program, it still remembers var a inside x()
 - Closure is a very powerful concept of JS, just because this function remembers
