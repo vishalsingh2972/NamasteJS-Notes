@@ -83,14 +83,14 @@ function x(){
   return y;
 }
 
-var z = x();
+var z = x(); //line 9
 console.log(z);
 //....................after 1000 lines of code
 z();
 ```
 - When y is returned, not only is the function returned but the entire closure (func.
   y + its lexical scope) is returned and put inside z. So when z is used
-  somewhere else in program, it still remembers var a inside x()
+  somewhere else in program, it still remembers var a inside x() //so even though after line 9 evn though x() function or x EC no longer exists in the memory but the y() function still remembers its lexical scope/environment or basically where it came from
 - Closure is a very powerful concept of JS, just because this function remembers
   things even if they are not in their lexical scope
 
