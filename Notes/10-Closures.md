@@ -109,6 +109,23 @@ console.log(z);
 //....................after 1000 lines of code
 z(); //line XXD
 ```
+### Corner Cases (JS Closure GOTCHAs)
+```
+//Example 8
+
+function x(){
+  var a = 7;
+  function y(){
+    console.log(a);
+  }
+  a = 100;
+  return y;
+}
+//console.log(z);
+var z = x();
+console.log(z);
+z();
+```
 ### Uses of Closure
 
 Module Design Pattern, Currying, Functions like once(fun that can be run only
