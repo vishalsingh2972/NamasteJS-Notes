@@ -8,12 +8,12 @@ function x() {
   setTimeout(function() {
   console.log(i);
   }, 3000);
-  console.log("This is Hari");
+  console.log("This is Vishal");
  }
  x();
  
  ```
- > This is Hari
+ > This is Vishal
  
  > 1 //after waiting 3 seconds (3000ms)
  
