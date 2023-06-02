@@ -147,5 +147,11 @@ z();
 
 ### Uses of Closure
 
-Module Design Pattern, Currying, Functions like once(fun that can be run only
-once), memoize, maintaining state in async world, setTimeout, iterators...
+- Module Design Pattern,
+-  Currying, 
+-  Functions like once(fun that can be run only once), 
+-  memoize, 
+-  maintaining state in async world, 
+-  setTimeout, 
+-  iterators 
+-  and many more...
