@@ -34,13 +34,13 @@ function x() {
       console.log(i);
      }, i*1000);
     }
-    console.log("This is Hari");
+    console.log("This is Vishal");
   }
   x();
   
  ```
  
- > This is Hari
+ > This is Vishal
  
  > 6
  
@@ -72,7 +72,7 @@ function x() {
     }
     close(i); // everytime you call close(i) it creates new copy of i. Only this time, it is with var itself!
    }
-    console.log("This is Hari");
+    console.log("This is Vishal");
   }
   x();
   
