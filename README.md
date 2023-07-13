@@ -6,6 +6,6 @@ This is my attempt at sharing JS knowledge with everyone, even those who might n
 Namaste 🙏 JavaScript course by the legendary Akshay Saini
 
 ## 💗 Contributions
-If you have notes of your own, and are interested in contributing to this repo, hit a PR! I'll review it and add it immediately 🤓
+If you have notes of your own, and are interested in contributing to this repo, hit a [PR](https://github.com/vishalsingh2972/NamasteJS-Notes/pulls)!  I'll review it and add it immediately 🤓
 
 
