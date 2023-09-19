@@ -1,4 +1,4 @@
-# JavaScript-A-Z-Notes 🎯
+# Namaste JavaScript Notes 🎯
 
 This is my attempt at sharing JS knowledge with everyone, even those who might not have the time to go through all the videos. Also, I will use this repo for quick reference to JS concepts when necessary. 
 
