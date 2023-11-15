@@ -760,7 +760,7 @@ function x() {
    }
    close(i); // everytime you call close(i) it creates new copy of i. Only this time, it is with var itself!
   }
-   console.log("This is Vishal ");
+   console.log("This is Vishal");
  }
  x();
 
