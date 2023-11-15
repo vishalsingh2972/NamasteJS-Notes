@@ -1253,6 +1253,6 @@ setTimeout(function cb() {
 
 
 ## 💗 Contributions
-If you have notes of your own, and are interested in contributing to this repo, hit a [PR](https://github.com/vishalsingh2972/NamasteJS-Notes/pulls)!  I'll review it and add it immediately 🤓
+If you have notes of your own, and are interested in contributing to this repo, hit a [PR](https://github.com/vishalsingh2972/NamasteJS-Notes/pulls) !  I'll review it and add it immediately 🤓
 
 
