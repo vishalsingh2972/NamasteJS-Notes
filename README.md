@@ -1,4 +1,6 @@
-![image](https://github.com/vishalsingh2972/NamasteJS-Notes/assets/106817047/11a98260-f265-42a0-98dd-c221fdbbbf37)
+<p align="center">
+    <img src= "https://github.com/vishalsingh2972/NamasteJS-Notes/assets/106817047/11a98260-f265-42a0-98dd-c221fdbbbf37)" /> 
+</p>
 
 # Namaste JavaScript Notes 🎯
 This is my attempt at sharing JS knowledge with everyone, even those who might not have the time to go through all the videos. Also, I will use this repo for quick reference to JS concepts when necessary. 
