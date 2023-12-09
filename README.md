@@ -12,15 +12,15 @@ This is my attempt at sharing JS knowledge with everyone, even those who might n
 
 #### Everything in JS happens inside the execution context.
 
-Assume execution context to be a big box where everything takes place. It has 2 components in it:
+Assume the execution context to be a big box where everything takes place. It has 2 components in it:
 
-<li> <strong>Memory : </strong>The place where all the variables and functions are stored as (key:value) pairs. Memory component is also known as <em>variable environment</em>.
-<li> <strong>Code : </strong>The place where code is executed one line at a time. Code component is also known as <em>Thread of Execution</em>
+<li> <strong>Memory : </strong>The place where all the variables and functions are stored as (key: value) pairs. Memory component is also known as the <em>variable environment</em>.
+<li> <strong>Code : </strong>The place where code is executed one line at a time. Code component is also known as the<em>Thread of Execution</em>
 
 ### JS is a synchronous single-threaded language.
 
-<li> By single threaded, we mean JS can only run 1 command at a time
-<li> By synchronous single threaded, we mean it can run 1 command at a time, <em>in a specific order</em>
+<li> By single-threaded, we mean JS can only run 1 command at a time
+<li> By synchronous-single threaded, we mean it can run 1 command at a time, <em>in a specific order</em>
 
 # Episode 2 : Execution & Call Stack
 
@@ -59,15 +59,16 @@ square4:undefined
 
 - The variable name is replaced with its actual assigned value from code. So now n:2
 - Skips over function code as there is nothing to assign there.
-- We encounter a function call in square2. So a brand new local EC is created inside the code part of global EC and this will have the same 2 components: Memory and Code.
-- In the local EC, ans and num are both undefined (in first phase). Then, the n value in global EC is passed to num, replacing undefined. num is the parameter and n is the argument.
-- ans = num\*num (calculated in code part of local EC and returned) replaces undefined in local EC (memory part) and the final value is returned from local and is assigned to square2 var in global.
-  After returning, local EC is removed form global EC and control goes back to global.
+- We encounter a function call in square2. So a brand new local EC is created inside the code part of the global EC and this will have the same 2 components: Memory and Code.
+- In the local EC, ans and num are both undefined (in the first phase). Then, the n value in global EC is passed to num, replacing undefined. num is the parameter and n is the argument.
+- ans = num\*num (calculated in code part of local EC and returned) replaces undefined in local EC (memory part) and the final value is returned from local EC and is assigned to square2 var in global.
+  After returning, local EC is removed from global EC.
+- when the return keyword is encountered or the program reaches the end of the line, it returns the control of the program where it was invoked and the local EC is deleted.
 - One more fun. call is met. Same thing happens here.
   Once square4 value is replaced from undefined to 16, global EC will also be deleted.
 
 To manage all these EC, a call **stack** is created. Everytime code is run, the EC is pushed in. So first global EC is pushed. Then e1 EC(for square2) is pushed, and then after
-value returned, is popped. Similarly e2 EC(for square4) is pushed, and then popped and finally Global is also popped and stack is empty.
+value returned, is popped. Similarly, e2 EC(for square4) is pushed, and then popped and finally Global is also popped and the stack is empty.
 
 > Call Stack maintains the order of execution of execution contexts
 
@@ -208,7 +209,7 @@ Output:
 
 **REASON OF WEIRDNESS**
 
-- The answer lies in the Global Exection Context. In the memory phase, the variables will be initialized as _undefined_ and functions will get the whole function code in their memory.
+- The answer lies in the Global Exection Context. In the memory creation phase, the variables will be initialized as _undefined_ and functions will get the whole function code in their memory.
 
 - This is the reason why we are getting these outputs.
 
@@ -259,11 +260,11 @@ Outputs:
 
 ### Everywhere JS is run, it is done with a JS execution engine. For Chrome: v8
 
-- Shortest JS program is nothing but an Empty JS file
+- The shortest JS program is nothing but an Empty JS file
 - Even for this program, JS engine does a lot behind the scenes
 - It creates the GEC, the "window" and the _this_ variable
 - Window is a big global object that has a lot of functions and variables. All of these can be accessed from anywhere in the program
-- _this_ points to _window_
+- _this_  keyword points to _window_
   > this === window -> true (at global level)
 
 ```
