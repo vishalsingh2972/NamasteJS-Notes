@@ -1,1 +1,17 @@
-
+# Content List :
+- [:movie_camera:](https://youtu.be/ZvbzSrg0afE?feature=shared) [Episode 1 : Execution Context](./Notes/1-ExecutionContext.md)
+- [:movie_camera:](https://youtu.be/iLWTnMzWtj4?feature=shared) [Episode 2 : Execution & Call Stack](./Notes/2-Execution-CallStack.md)
+- [:movie_camera:](https://youtu.be/Fnlnw8uY6jo?feature=shared) [Episode 3 : Hoisting](./Notes/3-Hoisting.md)
+- [:movie_camera:](https://youtu.be/gSDncyuGw0s?feature=shared) [ Episode 4 : Functions and Variable Environments](./Notes/4-Func-VarEnv.md)
+- [:movie_camera:](https://youtu.be/QCRpVw2KXf8?feature=shared) [Episode 5: Window and this keyword](./Notes/5-Window-this.md)
+- [:movie_camera:](https://youtu.be/B7iF6G3EyIk?feature=shared) [Episode 6: Undefined vs Not Defined](./Notes/6-Undef-NotDef.md)
+- [:movie_camera:](https://youtu.be/uH-tVP8MUs8?feature=shared) [Episode 7 : Scope and Lexical Environment](./Notes/7-Scope-LexEnv.md)
+- [:movie_camera:](https://youtu.be/BNC6slYCj50?feature=shared) [Episode 8 : let, const, temporal dead zone, types of errors](./Notes/8-letConst-deadzone-errors.md)
+- [:movie_camera:](https://youtu.be/lW_erSjyMeM?feature=shared) [Episode 9 : Block Scope and Shadowing](./Notes/9-BlockScope-Shadowing.md)
+- [:movie_camera:](https://youtu.be/qikxEIxsXco?feature=shared) [Episode 10 : Closures in JS](./Notes/10-Closures.md)
+- [:movie_camera:](https://youtu.be/eBTBG4nda2A?feature=shared) [Episode 11 : setTimeout + Closures Interview Question](./Notes/11-setTimeout-closures.md)
+- [:movie_camera:](https://youtu.be/t1nFAMws5FI?feature=shared) [Episode 12 : Famous Interview Questions ft. Closures](./Notes/12-JSInterview-Closures.md)
+- [:movie_camera:](https://youtu.be/btj35dh3_U8?feature=shared) [Episode 14 : First class and Anonymous functions](./Notes/14-Functions.md)
+- [:movie_camera:](https://youtu.be/8zKuNo4ay8E?feature=shared) [ Episode 15 : Callbacks and Event Listeners](./Notes/15-Callbacks-EventListeners.md)
+- [:movie_camera:](https://youtu.be/2WJL19wDH68?feature=shared) [Episode 16 : Asynchronous JS and Event Loops](./Notes/16-Async-EventLoops.md)
+- [:movie_camera:](https://youtu.be/nqsPmuicJJc?feature=shared) [Episode 17 : JS Engine and Google v8 architecture](./Notes/17-JSEngine-ChromeV8.md)
