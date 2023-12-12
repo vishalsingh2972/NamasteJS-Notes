@@ -1,4 +1,4 @@
-# Content List :
+# Content List (with video links) :
 - [:movie_camera:](https://youtu.be/ZvbzSrg0afE?feature=shared) [Episode 1 : Execution Context](./1-ExecutionContext.md)
 - [:movie_camera:](https://youtu.be/iLWTnMzWtj4?feature=shared) [Episode 2 : Execution & Call Stack](./2-Execution-CallStack.md)
 - [:movie_camera:](https://youtu.be/Fnlnw8uY6jo?feature=shared) [Episode 3 : Hoisting](./3-Hoisting.md)
