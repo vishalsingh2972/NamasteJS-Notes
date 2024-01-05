@@ -3,9 +3,11 @@
 </p>
 
 # Namaste JavaScript Notes 🎯
-This is my attempt at sharing JS knowledge with everyone, even those who might not have the time to go through all the videos. Also, I will use this repo for quick reference to JS concepts when necessary. 
 
-## 📝 Resource Used 
+This is my attempt at sharing JS knowledge with everyone, even those who might not have the time to go through all the videos. Also, I will use this repo for quick reference to JS concepts when necessary.
+
+## 📝 Resource Used
+
 [Namaste 🙏 JavaScript course](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP) by [Akshay Saini](https://github.com/akshaymarch7)
 
 # Episode 1 : Execution Context
@@ -27,16 +29,15 @@ Assume the execution context to be a big box where everything takes place. It ha
 Everytime you run a program, an execution context is created.
 When a variable or function is encountered, it is stored in the memory area.
 
-```
-var n=2;
-function square(num){
-    var ans = num*num;
-    return ans;
+```javascript
+var n = 2;
+function square(num) {
+  var ans = num * num;
+  return ans;
 }
 
 var square2 = square(n);
 var square4 = square(4);
-
 ```
 
 Now first, for this entire code a <strong>Global</strong> execution context is created.
@@ -76,18 +77,17 @@ value returned, is popped. Similarly, e2 EC(for square4) is pushed, and then pop
 
 # Episode 3 : Hoisting
 
-```
+```javascript
 // code example 1
 
 var x = 7;
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
 
 getName();
 console.log(x);
-
 ```
 
 Output:
@@ -96,18 +96,17 @@ Output:
 
 > 7
 
-```
+```javascript
 // code example 2
 
-getName();      // in most languages, both lines which are above their declaration will give error. Not in JS though.
+getName(); // in most languages, both lines which are above their declaration will give error. Not in JS though.
 console.log(x);
 
 var x = 7;
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -116,16 +115,15 @@ Output:
 
 > undefined
 
-```
+```javascript
 // code example 3
 
 getName();
 console.log(x);
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -139,17 +137,14 @@ Output:
 
 **Hoisting** is a concept which enables us to extract values of variables and functions even before initialising/assigning value without getting _error_
 
-```
-
+```javascript
 // code example 4
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
 
-console.log(getName)
-
-
+console.log(getName);
 ```
 
 Output:
@@ -160,18 +155,16 @@ Output:
 
 }
 
-```
-
+```javascript
 // code example 5
 
 getName();
 console.log(x);
-console.log(getName)
+console.log(getName);
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -186,19 +179,19 @@ Output:
 
 }
 
-```
+```javascript
 // code example 6
 
-console.log(getName)
+console.log(getName);
 
 var getName = function () {
-    console.log("Namaste JavaScript");
-}
+  console.log("Namaste JavaScript");
+};
 
-var getName = () => {  // use fat arrow function
-    console.log("Namaste JavaScript");
-}
-
+var getName = () => {
+  // use fat arrow function
+  console.log("Namaste JavaScript");
+};
 ```
 
 Output:
@@ -215,10 +208,10 @@ Output:
 
 # Episode 4 : Functions and Variable Environments
 
-```
+```javascript
 var x = 1;
 a();
-b();   // we are calling the functions before defining them. This will work properly, as seen in Hoisting (Ep3)
+b(); // we are calling the functions before defining them. This will work properly, as seen in Hoisting (Ep3)
 console.log(x);
 
 function a() {
@@ -226,12 +219,10 @@ function a() {
   console.log(x);
 }
 
-
 function b() {
   var x = 100;
   console.log(x);
 }
-
 ```
 
 Outputs:
@@ -264,14 +255,15 @@ Outputs:
 - Even for this program, JS engine does a lot behind the scenes
 - It creates the GEC, the "window" and the _this_ variable
 - Window is a big global object that has a lot of functions and variables. All of these can be accessed from anywhere in the program
-- _this_  keyword points to _window_
+- _this_ keyword points to _window_
   > this === window -> true (at global level)
 
-```
-var a = 10;      // not inside any fun. So global object
-function b() {    // this fun not inside any function. So global.
-  var x = 5;    // not global
- }
+```javascript
+var a = 10; // not inside any fun. So global object
+function b() {
+  // this fun not inside any function. So global.
+  var x = 5; // not global
+}
 console.log(window.a); //gives us "a" value
 console.log(this.a); //this points to window so it returns "a" value
 console.log(a); //also gives same "a" value. (if we dont put any . in front of variable, it **assumes variable is in global space**
@@ -289,13 +281,12 @@ console.log(x); // x is not defined. (tries to find x inside global space, but i
 
 > When variable is declared but not assigned value, its current value is undefined. But when the variable itself is not declared but called in code, then it is not defined.
 
-```
+```javascript
 console.log(x);
 var x = 25;
 
 console.log(x);
 console.log(a);
-
 ```
 
 > undefined <br/>
@@ -308,7 +299,7 @@ console.log(a);
 
 # Episode 7 : Scope and Lexical Environment
 
-```
+```javascript
 This is why JS is confusing (Case-1)
 
 function a() {
@@ -358,12 +349,12 @@ function a() {
 - LE of a() in turn is its memory space + reference to LE of parent (Global EC)
 - LE of Global EC points to _null_
 
-```
-   To summarize the above points:
+```javascript
+   // To summarize the above points:
 
    call_stack = [GEC, a(), c()]
 
-   Now lets also assign the memory sections of each execution context in call_stack.
+   // Now lets also assign the memory sections of each execution context in call_stack.
 
    c() = [[lexical environment pointer pointing to a()]]
 
@@ -386,14 +377,12 @@ function a() {
 
 > let and const declarations are hoisted. But its different from var
 
-```
-
+```javascript
 console.log(a); // ReferenceError: Cannot access 'a' before initialization
 console.log(b); // prints undefined as expected
 let a = 10;
 console.log(a); // 10
 var b = 15;
-
 ```
 
 It looks like let isn't hoisted, **but it is**
@@ -406,13 +395,13 @@ It looks like let isn't hoisted, **but it is**
 - Since a is not accessible on global, its not accessible in _window/this_ also
   > window.b or this.b -> 15; But window.a or this.a ->undefined, just like window.x->undefined (x isn't declared anywhere)
 
-```
+```javascript
 let a = 10;
 let a = 100;  //this code is rejected upfront as SyntaxError. (duplicate declaration)
 ------------------
 let a = 10;
 var a = 100; // this code also rejected upfront as SyntaxError.
-(can't use same name in same scope)
+// (can't use same name in same scope)
 
 ```
 
@@ -420,7 +409,7 @@ Let is a stricter version of var. Now, **const** is even more stricter than let.
 
 -const holds all above properties of let.
 
-```
+```javascript
 let a;
 a = 10;
 console.log(a) // prints 10 properly. Note declaration and assigning of a is in different lines.
@@ -428,7 +417,7 @@ console.log(a) // prints 10 properly. Note declaration and assigning of a is in 
 const b;
 b = 10;
 console.log(b); // SyntaxError: Missing initializer in const declaration.
-(This type of declaration won't work with const. const b = 10 only will work)
+// (This type of declaration won't work with const. const b = 10 only will work)
 ------------------
 const b = 100;
 b = 1000;
@@ -450,16 +439,16 @@ b = 1000;
 
   - This Error signifies that we are redeclaring a variable that is 'let' declared. No execution will take place.
 
-    ```
+    ```javascript
     //code example 1.1
-    let a=10;
-    let a=100;
+    let a = 10;
+    let a = 100;
     ```
 
-    ```
+    ```javascript
     //code example 1.2
-    let a=10;
-    var a=100;
+    let a = 10;
+    var a = 100;
     ```
 
     Will throw this Syntax error and no code will be run and be rejected affront.
@@ -504,7 +493,7 @@ PS: If in any interview when asked "Are let and const hoisted?" explain fully ab
 - Block aka _compound statement_ is used to group JS statements together into 1 group. We group them within {...}
 - The purpose is to group multiple statments at a place where JS expects only 1 statement.
 
-```
+```javascript
 //code example 1
 
 if(true)some statement
@@ -512,7 +501,7 @@ if(true)some statement
 
 But if we want to write more statements to execute after if condition; then:
 
-```
+```javascript
 //code example 2
 
 if(true){
@@ -529,13 +518,13 @@ if(true){
 
 - What are the variables and functions that can be accessed inside the block.
 
-```
+```javascript
 //code example 3
 
 {
-    var a = 10;
-    let b = 20;
-    const c = 30;
+  var a = 10;
+  let b = 20;
+  const c = 30;
 }
 
 console.log(a);
@@ -559,17 +548,17 @@ Outputs:
 
 ### **What is SHADOWING in JS?**
 
-```
+```javascript
 //code example 4
 
 var a = 100;
 {
-    var a = 10; //same name as global var
-    let b = 20;
-    const c = 30;
-    console.log(a); // 10
-    console.log(b); // 20
-    console.log(c); // 30
+  var a = 10; //same name as global var
+  let b = 20;
+  const c = 30;
+  console.log(a); // 10
+  console.log(b); // 20
+  console.log(c); // 30
 }
 
 console.log(a); // 10 instead of the 100 we were expecting. So block "a" modified val of global "a" as well.
@@ -581,15 +570,15 @@ console.log(a); // 10 instead of the 100 we were expecting. So block "a" modifie
 
 ### Instead of var let us use let
 
-```
+```javascript
 //code example 5
 
 let b = 100;
 {
-    var a = 10;
-    let b = 20;
-    const c = 30;
-    console.log(b);
+  var a = 10;
+  let b = 20;
+  const c = 30;
+  console.log(b);
 }
 
 console.log(b);
@@ -609,7 +598,7 @@ Outputs:
 
 ### Same logic is true even for functions
 
-```
+```javascript
 const c = 100;
 function x() {
   const c = 10;
@@ -617,7 +606,6 @@ function x() {
 }
 x();
 console.log(c);
-
 ```
 
 Output:
@@ -628,14 +616,13 @@ Output:
 
 ### **What is Illegal Shadowing?**
 
-```
+```javascript
 // code example 6
 
 let a = 20;
 {
-    var a = 20;
+  var a = 20;
 }
-
 ```
 
 Outputs:
@@ -647,14 +634,13 @@ Outputs:
 - All scope rules that work in function are same in arrow functions too.
 - Since var is function scoped, it is not a problem with the code below.
 
-```
+```javascript
 // code example 7
 
 let a = 20;
 function x() {
-    var a = 20;
+  var a = 20;
 }
-
 ```
 
 # Episode 10 : Closures in JS
@@ -663,20 +649,19 @@ function x() {
 
 **Closure :** Function bundled together with its lexical environment/scope.
 
-```
-JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
-eg:
+```javascript
+// JS is a weird language. You can pass functions as parameters to another function, assign a variable to an entire function, or even return a function.
+// eg:
 
 function x() {
   var a = 7;
   function y() {
-  console.log(a);
-}
-  return y;   // instead of y();
+    console.log(a);
+  }
+  return y; // instead of y();
 }
 var z = x();
-console.log(z);  // value of z is entire code of function y.
-
+console.log(z); // value of z is entire code of function y.
 ```
 
 When functions are returned from another fun, they still maintain their lexical scope.
@@ -692,16 +677,15 @@ Module Design Pattern, Currying, Functions like once(fun that can be run only on
 
 #### Time, tide and Javascript wait for none
 
-```
+```javascript
 function x() {
   var i = 1;
-  setTimeout(function() {
-  console.log(i);
+  setTimeout(function () {
+    console.log(i);
   }, 3000);
   console.log("This is Vishal");
- }
- x();
-
+}
+x();
 ```
 
 > This is Vishal
@@ -718,17 +702,16 @@ We expect JS to wait 3 sec, print 1 and then go down and print the string. But J
 
 We assume this has a simple approach as below
 
-```
+```javascript
 function x() {
- for(var i = 1; i<=5; i++){
-   setTimeout(function() {
-     console.log(i);
-    }, i*1000);
-   }
-   console.log("This is Vishal");
- }
- x();
-
+  for (var i = 1; i <= 5; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, i * 1000);
+  }
+  console.log("This is Vishal");
+}
+x();
 ```
 
 > This is Vishal
@@ -752,84 +735,91 @@ function x() {
 
 #### Using let instead of var is the best option. But if asked to use var only..?
 
-```
+```javascript
 function x() {
- for(var i = 1; i<=5; i++){
-   function close(i) {
-    setTimeout(function() {
-     console.log(i);
-    }, i*1000);
-    // put the setT fun inside new function close()
-   }
-   close(i); // everytime you call close(i) it creates new copy of i. Only this time, it is with var itself!
+  for (var i = 1; i <= 5; i++) {
+    function close(i) {
+      setTimeout(function () {
+        console.log(i);
+      }, i * 1000);
+      // put the setT fun inside new function close()
+    }
+    close(i); // everytime you call close(i) it creates new copy of i. Only this time, it is with var itself!
   }
-   console.log("This is Vishal");
- }
- x();
-
+  console.log("This is Vishal");
+}
+x();
 ```
 
 ## Only the important new concepts
 
 - Closures are used in encapsulation and data hiding.
 
-```
-(without closures)
+```javascript
+// (without closures)
 var count = 0;
 
-function increment(){
+function increment() {
   count++;
 }
 
-in this code, anyone can access count and change it.
+// in the code above, anyone can access count and change it.
 
-(with closures) -> put everything into a function
+/* -------------------------------------------------------------- */
+
+// (with closures) -> put everything into a function
 
 function counter() {
   var count = 0;
 
-  function increment(){
+  function increment() {
     count++;
   }
 }
 console.log(count); // this will give referenceError as count can't be accessed.
 
-(inc with function using closure)
+/* -------------------------------------------------------------- */
+
+// (inc with function using closure)
 
 function counter() {
   var count = 0;
-  return function increment(){
+  return function increment() {
     count++;
     console.log(count);
-  }
+  };
 }
 var counter1 = counter(); //counter fun has closure with count var.
 counter1(); // increments counter
 
-Above code is not good and scalable for say, when you plan to implement decrement counter at a later stage.
-To address this issue, we use constructors
+/* -------------------------------------------------------------- */
 
-Adding decrement counter and refactoring code:
+// Above code is not good and scalable for say, when you plan to implement decrement counter at a later stage.
 
-function Counter() { //constructor function. Good coding would be to capitalize first letter of ctor fun.
+// To address this issue, we use constructors
+
+// Adding decrement counter and refactoring code:
+
+function Counter() {
+  //constructor function. Good coding would be to capitalize first letter of ctor fun.
   var count = 0;
-  this.incrementCounter = function(){ //anonymous function
+  this.incrementCounter = function () {
+    //anonymous function
     count++;
     console.log(count);
-  }
-   this.decrementCounter = function(){
+  };
+  this.decrementCounter = function () {
     count--;
     console.log(count);
-  }
+  };
 }
 
-var counter1 = new Counter();  // new keyword for ctor fun
+var counter1 = new Counter(); // new keyword for ctor fun
 counter1.incrementCounter();
 counter1.incrementCounter();
 counter1.decrementCounter();
 
 // returns 1 2 1
-
 ```
 
 ### Disadvantages of closure
@@ -839,16 +829,16 @@ counter1.decrementCounter();
 - **Garbage collector** : Program in JS engine or browser that frees up unused memory. In highlevel languages like C++ or JAVA, garbage collection is left to the
   programmer, but in JS engine its done implicitly.
 
-```
+```javascript
 function a() {
   var x = 0;
   return function b() {
     console.log(x);
-   }
- }
+  };
+}
 
- var y = a(); // y is a copy of b()
- y();
+var y = a(); // y is a copy of b()
+y();
 ```
 
 Once a() is called, its element x should be garbage collected ideally. But fun b has closure over var x. So mem of x cannot be freed.
@@ -861,22 +851,20 @@ Say we have var x = 0, z = 10 inabove code. When console log happens, x is print
 
 #### Function statement : Just your normal function definition
 
-```
+```javascript
 function a() {
   console.log("a called");
 }
 a();
-
 ```
 
 #### Function Expression : Assigning a function to a variable. Function acts like a value
 
-```
-var b = function() {
+```javascript
+var b = function () {
   console.log("b called");
-}
+};
 b();
-
 ```
 
 **Difference btw function statement and expression is Hoisting**
@@ -894,58 +882,50 @@ b();
 
 #### Named Function Expression : Same as Function Expression but function has a name instead of being anonymous
 
-```
+```javascript
 var b = function xyz() {
   console.log("b called");
-}
+};
 b(); // prints "b called" properly
 xyz(); // Throws ReferenceError:xyz is not defined.
-
 ```
 
 > xyz function is not created in global scope. So it can't be called.
 
 #### Parameters vs Arguments
 
-```
-var b = function(param1, param2) {  // labels/identifiers that get the arg values
+```javascript
+var b = function (param1, param2) {
+  // labels/identifiers that get the arg values
   console.log("b called");
-}
+};
 b(arg1, arg2); // arguments - values passed inside function call
-
 ```
 
 #### First Class Function aka First Class Citizens
 
 - You can pass functions inside a function as arguments(WOW!)
 
-```
-var b = function(param1) {
+```javascript
+var b = function (param1) {
   console.log(param1); // prints " f() {} "
-}
-b(function(){
+};
+b(function () {});
 
-});
+// this can also be done:
 
-this can also be done:
-
-var b = function(param1) {
+var b = function (param1) {
   console.log(param1);
-}
-function xyz(){
-
-}
+};
+function xyz() {}
 b(xyz); // same thing as prev code
 
-you can return a function from a function:
+// you can return a function from a function:
 
-var b = function(param1) {
-  return function() {
-
-  }
-}
+var b = function (param1) {
+  return function () {};
+};
 console.log(b()); //we log the entire fun within b.
-
 ```
 
 #### Arrow Functions (latest in ES6 (ECMAScript 2015) -> coming in future lecture
@@ -961,10 +941,10 @@ console.log(b()); //we log the entire fun within b.
 - This is how we do async things. JS is a synch language, but it doesn't wait 1 sec for setT to finish before going to code below it. It stores the function, attaches timer
   and goes down the code.
 
-```
+```javascript
 setTimeout(function () {
   console.log("timer");
- }, 5000);
+}, 5000);
 
 function x(y) {
   console.log("x");
@@ -991,15 +971,18 @@ x(function y() {
 
 - When we create a button in HTML and attack a clickListener in JS :
 
-```
 in index.html
 
+```html
 <button id="clickMe">Click Me!</button>
+```
 
 in index.js
 
-document.getElementById("clickMe").addEventListener("click", function xyz(){ //when event click occurs, this callback function is called into callstack
-    console.log("Button clicked");
+```javascript
+document.getElementById("clickMe").addEventListener("click", function xyz() {
+  //when event click occurs, this callback function is called into callstack
+  console.log("Button clicked");
 });
 ```
 
@@ -1007,21 +990,22 @@ Suppose we want to increase count by 1 each time button clicked.
 
 - Use global variable (not good as anyone can change it)
 
-```
+```javascript
 let count = 0;
-document.getElementById("clickMe").addEventListener("click", function xyz(){
-   console.log("Button clicked", ++count);
+document.getElementById("clickMe").addEventListener("click", function xyz() {
+  console.log("Button clicked", ++count);
 });
 ```
 
 - Use closures for data abstraction
 
-```
-function attachEventList() {  //creating new fun for closure
-   let count = 0;
-   document.getElementById("clickMe").addEventListener("click", function xyz(){
-   console.log("Button clicked", ++count);  //now callback fun forms closure with outer scope(count)
-});
+```javascript
+function attachEventList() {
+  //creating new fun for closure
+  let count = 0;
+  document.getElementById("clickMe").addEventListener("click", function xyz() {
+    console.log("Button clicked", ++count); //now callback fun forms closure with outer scope(count)
+  });
 }
 attachEventList();
 ```
@@ -1059,16 +1043,16 @@ We get all these inside call stack through _global object_ ie. **window**
 
 ### Workflow
 
-```
+```javascript
 // First a GEC is created and put inside call stack.
 console.log("Start"); // this calls the console web api (through window) which in turn actually modifies values in console.
 
-setTimeout(function cb() {  //this calls the setT web api which gives access to timer feature. It stores the callback cb() and starts timer.
+setTimeout(function cb() {
+  //this calls the setT web api which gives access to timer feature. It stores the callback cb() and starts timer.
   console.log("Callback");
- }, 5000);
+}, 5000);
 
 console.log("End"); // calls console api and logs in console window. After this GEC pops from call stack.
-
 ```
 
 - While all this is happening, the timer is constantly ticking. After it becomes 0, the callback cb() has to run.
@@ -1090,15 +1074,15 @@ Final console output:
 
 ### Same happens for any other event as well (Click, Hover etc). This is the basic workflow.
 
-```
+```javascript
 console.log("Start");
-document. getElementById("btn").addEventListener("click", function cb() { // cb() registered inside webapi environment and event(click) attached to it. ie.
-// REGISTERING CALLBACK AND ATTACHING EVENT TO IT.
+document.getElementById("btn").addEventListener("click", function cb() {
+  // cb() registered inside webapi environment and event(click) attached to it. ie.
+  // REGISTERING CALLBACK AND ATTACHING EVENT TO IT.
   console.log("Callback");
 });
 
 console.log("End"); // calls console api and logs in console window. After this GEC pops from call stack.
-
 ```
 
 In above code, even after console prints "Start" and "End" and pops GEC out, **the eventListener stays in webapi env**(with hope that user may click it
@@ -1112,19 +1096,18 @@ some day) until explicitly removed, or the browser is closed.
 
 ### fetch() works a bit different than the rest
 
-```
+```javascript
 console.log("Start"); // this calls the console web api (through window) which in turn actually modifies values in console.
 
 setTimeout(function cbT() {
   console.log("CB Timeout");
- }, 5000);
+}, 5000);
 
- fetch("https://api.netflix.com").then(function cbF() {
+fetch("https://api.netflix.com").then(function cbF() {
   console.log("CB Netflix");
- });
+});
 
 console.log("End");
-
 ```
 
 - Same steps for everything before fetch() in above code.
@@ -1196,7 +1179,7 @@ Companies use different JS engines and each try to make theirs the best.
 
 (Episode number mixup. This is the actual 17th episode)
 
-```
+```javascript
 console.log("Start");
 
 setTimeout(function cb() {
@@ -1233,15 +1216,14 @@ While execution of program
 
 ### Now what if the timeout = 0sec
 
-```
+```javascript
 console.log("Start");
 
 setTimeout(function cb() {
   console.log("Callback");
- }, 0);
+}, 0);
 
- console.log("End");
-
+console.log("End");
 ```
 
 - Even though timer = 0s, the cb() has to go through the queue. Registers calback in webapi's env , moves to callback queue, and execute once callstack is empty
@@ -1254,8 +1236,6 @@ setTimeout(function cb() {
 
 - This method of putting timer = 0, can be used to defer a less imp fun by a little so the more important fun (here printing "End") can take place
 
-
 ## 💗 Contributions
-If you have notes of your own, and are interested in contributing to this repo, hit a [PR](https://github.com/vishalsingh2972/NamasteJS-Notes/pulls) !  I'll review it and add it immediately 🤓
 
-
+If you have notes of your own, and are interested in contributing to this repo, hit a [PR](https://github.com/vishalsingh2972/NamasteJS-Notes/pulls) ! I'll review it and add it immediately 🤓
