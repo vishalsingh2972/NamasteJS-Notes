@@ -300,7 +300,7 @@ console.log(a);
 # Episode 7 : Scope and Lexical Environment
 
 ```javascript
-This is why JS is confusing (Case-1)
+// This is why JS is confusing (Case-1)
 
 function a() {
     console.log(b); // surprisingly instead of printing undefined it prints 10.
@@ -310,9 +310,9 @@ function a() {
 var b = 10;
 a();
 
----------------------
+/* --------------------- */
 
-Another case: (Case-2)
+// Another case: (Case-2)
 
 function a() {
   c();
@@ -323,9 +323,9 @@ function a() {
  var b = 10;
  a();
 
- --------------------
+/* -------------------- */
 
- Another one (DJ KHALED!) (Case-3)
+ // Another one (DJ KHALED!) (Case-3)
 
  function a() {
   var b = 10;
@@ -765,8 +765,6 @@ function increment() {
 
 // in the code above, anyone can access count and change it.
 
-/* -------------------------------------------------------------- */
-
 // (with closures) -> put everything into a function
 
 function counter() {
@@ -777,8 +775,6 @@ function counter() {
   }
 }
 console.log(count); // this will give referenceError as count can't be accessed.
-
-/* -------------------------------------------------------------- */
 
 // (inc with function using closure)
 
@@ -792,10 +788,8 @@ function counter() {
 var counter1 = counter(); //counter fun has closure with count var.
 counter1(); // increments counter
 
-/* -------------------------------------------------------------- */
 
 // Above code is not good and scalable for say, when you plan to implement decrement counter at a later stage.
-
 // To address this issue, we use constructors
 
 // Adding decrement counter and refactoring code:

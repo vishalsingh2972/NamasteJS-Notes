@@ -1,17 +1,16 @@
 # Episode 3 : Hoisting
 
-```
+```javascript
 // code example 1
 
 var x = 7;
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
 
 getName();
 console.log(x);
-
 ```
 
 Output:
@@ -20,18 +19,17 @@ Output:
 
 > 7
 
-```
+```javascript
 // code example 2
 
-getName();      // in most languages, both lines which are above their declaration will give error. Not in JS though.
+getName(); // in most languages, both lines which are above their declaration will give error. Not in JS though.
 console.log(x);
 
 var x = 7;
 
-function getName(){
-    console.log("Namaste JavaScript");
+function getName() {
+  console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
