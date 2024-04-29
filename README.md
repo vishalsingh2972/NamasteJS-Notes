@@ -15,7 +15,7 @@ This is my attempt at sharing JavaScript knowledge with everyone, even those who
 Assume the execution context to be a big box where everything takes place. It has 2 components in it:
 
 <li> <strong>Memory : </strong>The place where all the variables and functions are stored as (key: value) pairs. Memory component is also known as the <em>variable environment</em>.
-<li> <strong>Code : </strong>The place where code is executed one line at a time. Code component is also known as the<em>Thread of Execution</em>
+<li> <strong>Code : </strong>The place where code is executed one line at a time. Code component is also known as the <em>Thread of Execution</em>
 
 ### JS is a synchronous single-threaded language.
 
